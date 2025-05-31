@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Omnes Scolaire - Accueil</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .carousel {
+    position: relative;
+    width: 800px;              /* largeur fixe du carrousel */
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    background: white;
+}
+
+.slides {
+    display: flex;
+    width: 3200px;             /* 4 images x 800px chacune */
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 800px;              /* 100% de la largeur du carrousel */
+    flex-shrink: 0;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+
+.caption {
+    margin-top: 15px;
+    font-size: 1.2em;
+    background-color: #f0f0f0;
+    padding: 10px;
+    color: #333;
+    border-top: 1px solid #ccc;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background-color: #004080;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OMNES SCOLAIRE</h1>
+    </header>
+
+    <nav>
+        <a href="parcourir.html">Tout Parcourir</a>
+        <a href="recherche.html">Recherche</a>
+        <a href="rendezvous.html">Rendez-vous</a>
+        <a href="compte.html">Votre Compte</a>
+    </nav>
+
+    <main>
+        <h2>Bienvenue sur la plateforme Omnes Scolaire !</h2>
+        <p>Sur cette plateforme de rendez-vous, trouvez les profs, les creneaux et les tarifs de soutien scolaire a votre guise !</p>
+
+        <div class="carousel">
+            <div class="slides" id="slides">
+                <div class="slide">
+                    <a href="rendezvous.html"><img src="images/professeurR.png" alt="Professeur"></a>
+                    <div class="caption">Des professeurs à l'écoute des élèves ! Prenez rendez-vous maintenant !</div>
+                </div>
+                <div class="slide">
+                    <a href="parcourir_recherche.html"><img src="images/recherche.png" alt="Recherche"></a>
+                    <div class="caption">Explorez la recherche scientifique à Omnes</div>
+                </div>
+                <div class="slide">
+                    <a href="enseignement.html"><img src="images/professeursphoto.png" alt="Recherche"></a>
+                    <div class="caption">Découvrez le parcours et l'expertise de nos differents professeurs!</div>
+                </div>
+                <div class="slide">
+                    <a href="compte.html"><img src="images/compte.png" alt="Compte"></a>
+                    <div class="caption">Gérez votre profil et vos rendez-vous depuis votre espace personnel</div>
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">❮</button>
+            <button class="next" onclick="moveSlide(1)">❯</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact : contact@omnes.fr | +33 1 23 45 67 89</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.getElementById("slides");
+
+        function moveSlide(step) {
+            const totalSlides = slides.children.length;
+            currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(-${currentSlide * 800}px)`;  // 800 = largeur slide
+
+        }
+    </script>
+</body>
+</html>

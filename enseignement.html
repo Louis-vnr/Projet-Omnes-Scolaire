@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Enseignement - Omnes Scolaire</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2em;
+    }
+
+    .prof-list {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .prof-card {
+      display: flex;
+      align-items: center;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .prof-card:hover {
+      transform: scale(1.02);
+      background-color: #e8f0ff;
+    }
+
+    .prof-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .prof-info h3 {
+      margin: 0;
+      color: #004080;
+    }
+
+    .prof-info p {
+      margin: 5px 0;
+    }
+
+    .prof-actions {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .prof-actions button {
+      margin: 4px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .rdv-btn { background-color: #b0e57c; }
+    .chat-btn { background-color: #aad4f5; }
+    .cv-btn { background-color: #e0e0e0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>OMNES SCOLAIRE</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="parcourir.html">Tout Parcourir</a>
+    <a href="recherche.html">Recherche</a>
+    <a href="compte.html">Votre Compte</a>
+  </nav>
+
+  <main class="section">
+    <h2>Nos enseignants</h2>
+    <div class="prof-list">
+
+      <!-- SEGADO -->
+      <a href="profils/segado.html" class="prof-card">
+        <img src="images/segado.png" alt="Jean-Pierre Segado">
+        <div class="prof-info">
+          <h3>Jean-Pierre Segado</h3>
+          <p><strong>Spécialité :</strong> Informatique</p>
+          <p><strong>Salle :</strong> P-428</p>
+          <p><strong>Téléphone :</strong> +33 01 02 03 04 05</p>
+          <p><strong>Email :</strong> jean-pierre.segado@ece.fr</p>
+        </div>
+        <div class="prof-actions">
+          <button class="rdv-btn">Prendre un RDV</button><br>
+          <button class="chat-btn">Communiquer</button><br>
+          <button class="cv-btn">Voir son CV</button>
+        </div>
+      </a>
+
+      <!-- BOURER -->
+      <a href="profils/bourer.html" class="prof-card">
+        <img src="images/bourer.png" alt="Mathilde Bourer">
+        <div class="prof-info">
+          <h3>Mathilde Bourer</h3>
+          <p><strong>Spécialité :</strong> Mathématiques</p>
+          <p><strong>Salle :</strong> B-312</p>
+          <p><strong>Téléphone :</strong> +33 01 22 33 44 55</p>
+          <p><strong>Email :</strong> mathilde.bourer@ece.fr</p>
+        </div>
+        <div class="prof-actions">
+          <button class="rdv-btn">Prendre un RDV</button><br>
+          <button class="chat-btn">Communiquer</button><br>
+          <button class="cv-btn">Voir son CV</button>
+        </div>
+      </a>
+
+      <!-- BELLUCI -->
+      <a href="profils/belluci.html" class="prof-card">
+        <img src="images/belluci.png" alt="Mathéo Belluci">
+        <div class="prof-info">
+          <h3>Mathéo Belluci</h3>
+          <p><strong>Spécialité :</strong> Physique</p>
+          <p><strong>Salle :</strong> C-215</p>
+          <p><strong>Téléphone :</strong> +33 01 66 77 88 99</p>
+          <p><strong>Email :</strong> matheo.belluci@ece.fr</p>
+        </div>
+        <div class="prof-actions">
+          <button class="rdv-btn">Prendre un RDV</button><br>
+          <button class="chat-btn">Communiquer</button><br>
+          <button class="cv-btn">Voir son CV</button>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Contact : contact@omnes.fr</p>
+  </footer>
+</body>
+</html>
